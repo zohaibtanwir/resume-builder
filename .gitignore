@@ -37,3 +37,7 @@ next-env.d.ts
 
 # Exclude page folder
 src/app/page/
+
+# Testing
+coverage/
+*.lcov
