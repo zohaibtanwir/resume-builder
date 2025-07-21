@@ -1,0 +1,12 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+    .page-break-before {
+        page-break-before: always;
+        break-before: page;
+        padding-top: 2rem;
+    }
+}
