@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 import React, { useRef, useState } from "react";
-import "./style.css";
+import "./style.scss";
 
 // Import React Quill dynamically to avoid SSR issues
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
