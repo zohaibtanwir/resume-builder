@@ -1,268 +1,268 @@
 @page {
-    size: A4;
-    margin: 0;
+	size: A4;
+	margin: 0;
 }
 
 @media print {
-    .page-break-before {
-        page-break-before: always;
-        break-before: page;
-        padding-top: 2rem;
-    }
+	.page-break-before {
+		page-break-before: always;
+		break-before: page;
+		padding-top: 2rem;
+	}
 }
 
 /* Form-specific styles */
 input[type="text"],
-input[type="email"], 
+input[type="email"],
 input[type="tel"],
 input[type="url"],
 textarea {
-    color: #1f2937 !important;
-    background-color: white !important;
+	color: #1f2937 !important;
+	background-color: white !important;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus, 
+input[type="tel"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* Quill Editor Specific Fixes */
 .quill-editor .ql-editor {
-    color: #1f2937 !important;
-    background-color: white !important;
-    min-height: 120px !important;
-    padding: 12px !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
-    border: none !important;
+	color: #1f2937 !important;
+	background-color: white !important;
+	min-height: 120px !important;
+	padding: 12px !important;
+	font-size: 14px !important;
+	line-height: 1.5 !important;
+	border: none !important;
 }
 
 .ql-editor {
-    color: #1f2937 !important;
-    background-color: white !important;
-    min-height: 120px !important;
-    padding: 12px !important;
-    font-size: 14px !important;
-    line-height: 1.5 !important;
+	color: #1f2937 !important;
+	background-color: white !important;
+	min-height: 120px !important;
+	padding: 12px !important;
+	font-size: 14px !important;
+	line-height: 1.5 !important;
 }
 
 .ql-editor.ql-blank::before {
-    color: #9ca3af !important;
-    font-style: normal !important;
-    opacity: 0.7 !important;
+	color: #9ca3af !important;
+	font-style: normal !important;
+	opacity: 0.7 !important;
 }
 
 /* Fix Quill list styling */
 .ql-editor ul {
-    padding-left: 1.5em !important;
-    margin: 0.5em 0 !important;
+	padding-left: 1.5em !important;
+	margin: 0.5em 0 !important;
 }
 
 .ql-editor ol {
-    padding-left: 1.5em !important;
-    margin: 0.5em 0 !important;
+	padding-left: 1.5em !important;
+	margin: 0.5em 0 !important;
 }
 
 .ql-editor li {
-    margin: 0.25em 0 !important;
-    color: #1f2937 !important;
-    list-style-type: disc !important;
+	margin: 0.25em 0 !important;
+	color: #1f2937 !important;
+	list-style-type: disc !important;
 }
 
 .ql-editor ol li {
-    list-style-type: decimal !important;
+	list-style-type: decimal !important;
 }
 
 .ql-editor ul li::marker {
-    color: #1f2937 !important;
+	color: #1f2937 !important;
 }
 
 .ql-editor ol li::marker {
-    color: #1f2937 !important;
+	color: #1f2937 !important;
 }
 
 /* Ensure toolbar is visible and functional */
 .ql-toolbar {
-    border-top: 1px solid #e5e7eb !important;
-    border-left: 1px solid #e5e7eb !important;
-    border-right: 1px solid #e5e7eb !important;
-    background-color: #f9fafb !important;
+	border-top: 1px solid #e5e7eb !important;
+	border-left: 1px solid #e5e7eb !important;
+	border-right: 1px solid #e5e7eb !important;
+	background-color: #f9fafb !important;
 }
 
 .ql-container {
-    border-bottom: 1px solid #e5e7eb !important;
-    border-left: 1px solid #e5e7eb !important;
-    border-right: 1px solid #e5e7eb !important;
-    background-color: white !important;
+	border-bottom: 1px solid #e5e7eb !important;
+	border-left: 1px solid #e5e7eb !important;
+	border-right: 1px solid #e5e7eb !important;
+	background-color: white !important;
 }
 
 .ql-toolbar .ql-stroke {
-    fill: none !important;
-    stroke: #374151 !important;
+	fill: none !important;
+	stroke: #374151 !important;
 }
 
 .ql-toolbar .ql-fill {
-    fill: #374151 !important;
-    stroke: none !important;
+	fill: #374151 !important;
+	stroke: none !important;
 }
 
 .ql-toolbar button:hover {
-    background-color: #e5e7eb !important;
+	background-color: #e5e7eb !important;
 }
 
 .ql-toolbar button.ql-active {
-    background-color: #dbeafe !important;
+	background-color: #dbeafe !important;
 }
 
 /* Scrollbar styling for form */
 .overflow-y-auto::-webkit-scrollbar {
-    width: 6px;
+	width: 6px;
 }
 
 .overflow-y-auto::-webkit-scrollbar-track {
-    background: #f1f5f9;
+	background: #f1f5f9;
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 3px;
+	background: #cbd5e1;
+	border-radius: 3px;
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+	background: #94a3b8;
 }
 
 /* Resume preview specific styling */
 #resume-preview {
-    max-height: 85vh;
-    overflow-y: auto;
+	max-height: 85vh;
+	overflow-y: auto;
 }
 
 /* Responsive font sizing for preview */
 @media (max-width: 768px) {
-    #resume-preview {
-        font-size: 10px;
-    }
+	#resume-preview {
+		font-size: 10px;
+	}
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    #resume-preview {
-        font-size: 11px;
-    }
+	#resume-preview {
+		font-size: 11px;
+	}
 }
 
 @media (min-width: 1025px) {
-    #resume-preview {
-        font-size: 12px;
-    }
+	#resume-preview {
+		font-size: 12px;
+	}
 }
 
 /* Rich text editor styling */
 [contenteditable]:empty:before {
-    content: attr(data-placeholder);
-    color: #9ca3af;
-    pointer-events: none;
+	content: attr(data-placeholder);
+	color: #9ca3af;
+	pointer-events: none;
 }
 
 [contenteditable]:focus {
-    outline: none;
+	outline: none;
 }
 
 /* Rich text editor content styling */
 .rich-text-content ul {
-    margin: 0.5em 0;
-    padding-left: 1.5em;
+	margin: 0.5em 0;
+	padding-left: 1.5em;
 }
 
 .rich-text-content ol {
-    margin: 0.5em 0;
-    padding-left: 1.5em;
+	margin: 0.5em 0;
+	padding-left: 1.5em;
 }
 
 .rich-text-content li {
-    margin: 0.25em 0;
+	margin: 0.25em 0;
 }
 
 .rich-text-content strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .rich-text-content em {
-    font-style: italic;
+	font-style: italic;
 }
 
 /* Resume preview list styling */
 #resume-preview ul {
-    list-style-type: disc !important;
-    margin: 0.5em 0 !important;
-    padding-left: 1.5em !important;
+	list-style-type: disc !important;
+	margin: 0.5em 0 !important;
+	padding-left: 1.5em !important;
 }
 
 #resume-preview ol {
-    list-style-type: decimal !important;
-    margin: 0.5em 0 !important;
-    padding-left: 1.5em !important;
+	list-style-type: decimal !important;
+	margin: 0.5em 0 !important;
+	padding-left: 1.5em !important;
 }
 
 #resume-preview li {
-    margin: 0.25em 0 !important;
-    display: list-item !important;
-    line-height: 1.4 !important;
+	margin: 0.25em 0 !important;
+	display: list-item !important;
+	line-height: 1.4 !important;
 }
 
 /* PDF specific styles */
 #pdf-temp ul {
-    list-style-type: disc !important;
-    margin: 0.5em 0 !important;
-    padding-left: 1.5em !important;
+	list-style-type: disc !important;
+	margin: 0.5em 0 !important;
+	padding-left: 1.5em !important;
 }
 
 #pdf-temp ol {
-    list-style-type: decimal !important;
-    margin: 0.5em 0 !important;
-    padding-left: 1.5em !important;
+	list-style-type: decimal !important;
+	margin: 0.5em 0 !important;
+	padding-left: 1.5em !important;
 }
 
 #pdf-temp li {
-    margin: 0.25em 0 !important;
-    display: list-item !important;
-    line-height: 1.4 !important;
+	margin: 0.25em 0 !important;
+	display: list-item !important;
+	line-height: 1.4 !important;
 }
 
 /* Print styles for PDF generation */
 @media print {
-    body * {
-        visibility: hidden;
-    }
-    
-    #resume-preview,
-    #resume-preview *,
-    #pdf-temp,
-    #pdf-temp * {
-        visibility: visible;
-    }
-    
-    #resume-preview,
-    #pdf-temp {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100% !important;
-        height: 100% !important;
-        transform: none !important;
-        margin: 0 !important;
-        padding: 20mm !important;
-        font-size: 12px !important;
-        background: white !important;
-        color: #2a2a2e !important;
-    }
-    
-    .transform {
-        transform: none !important;
-    }
-} 
+	body * {
+		visibility: hidden;
+	}
+
+	#resume-preview,
+	#resume-preview *,
+	#pdf-temp,
+	#pdf-temp * {
+		visibility: visible;
+	}
+
+	#resume-preview,
+	#pdf-temp {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100% !important;
+		height: 100% !important;
+		transform: none !important;
+		margin: 0 !important;
+		padding: 20mm !important;
+		font-size: 12px !important;
+		background: white !important;
+		color: #2a2a2e !important;
+	}
+
+	.transform {
+		transform: none !important;
+	}
+}
