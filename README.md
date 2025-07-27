@@ -1,6 +1,6 @@
 # 📄 Dynamic Resume Builder
 
-A modern, interactive resume builder built with **Next.js**, **TypeScript**, and **React**. Create professional resumes with real-time preview, rich text editing, and PDF export functionality.
+A modern, interactive resume builder built with **Next.js**, **TypeScript**, and **React**. Create professional resumes with real-time preview, rich text editing, and PDF export functionality...
 
 ![Resume Builder Demo](public/preview-screenshot.png)
 
