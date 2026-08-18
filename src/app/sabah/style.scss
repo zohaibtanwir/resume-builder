@@ -1,0 +1,73 @@
+// A4 with a real top/bottom margin. This margin applies to EVERY printed page,
+// unlike the container's own padding, which only lands on page one.
+$page-margin-y: 13mm;
+$page-content-height: 297mm - ($page-margin-y * 2);
+
+// How many pages the CV currently runs to. The rail divider is stretched to the
+// bottom of the last page, so this has to match reality — if the content grows
+// past the page count, bump it or the divider stops short.
+$print-pages: 2;
+
+// Height of the header block plus the gap above the two-column body, measured
+// from the rendered print layout. Subtracted so the body ends at the page foot.
+$header-block: 50mm;
+
+// A little slack so rounding never tips the body onto an extra blank page.
+$fill-slack: 2mm;
+
+@page {
+    size: A4;
+    margin: $page-margin-y 0;
+}
+
+@media print {
+    // The container's vertical padding would stack on top of the @page margin
+    // on page one, so drop it and let @page own the vertical rhythm.
+    .cv-page {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    // The rail's border-right is what draws the vertical divider, and a flex
+    // row stretches its children to the row's height. So growing the row to
+    // fill the last page carries the divider down with it.
+    //
+    // Chrome does not repeat position:fixed elements across printed pages, so a
+    // fixed rule is not an option here; a background gradient would need the
+    // "Background graphics" print option enabled. A border needs neither.
+    .cv-body {
+        min-height: calc(
+            #{$print-pages} * #{$page-content-height} - #{$header-block} - #{$fill-slack}
+        );
+    }
+
+    // Keep a role's title, company and location together, and glued to what
+    // follows, so a heading never lands alone at the foot of a page.
+    .role-header {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    .role-dates {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    // Bullets flow freely across a page boundary, but an individual bullet is
+    // never split mid-sentence. Avoiding breaks on the whole entry instead
+    // would shunt long roles wholesale onto the next page and leave a gap.
+    .role-bullets > li {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    // Forces a hard break. Only safe in single-column content: inside the
+    // two-column flex body, breaking one column leaves the other half empty.
+    .page-break-before {
+        page-break-before: always;
+        break-before: page;
+        padding-top: 2rem;
+    }
+}
